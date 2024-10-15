@@ -1,95 +1,108 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-ssd-32x32.png">
-    <title>PC+Rápido</title>
-    
-    <!-- Link do CSS do Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <title>Zabbix Dashboard</title>
     <style>
-        /* Estilos do modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.4);
-            padding-top: 60px;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
+
+        .navbar {
+            background-color: #0066cc;
+            padding: 15px;
+            text-align: center;
         }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
+
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
             font-weight: bold;
         }
-        .close:hover,
-        .close:focus {
-            color: black;
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .card {
+            background-color: white;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h5 {
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .card a {
             text-decoration: none;
-            cursor: pointer;
+            color: white;
+            background-color: #0066cc;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: #0066cc;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
         }
     </style>
 </head>
+
 <body>
-
-<h1>Maximize o Desempenho do Seu Computador</h1>
-<button id="saibaMaisBtn">Saiba Mais</button>
-
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>👨🏻‍💻 PC +RÁPIDO - APRENDA NA PRÁTICA!👩🏻‍💻</h2>
-        <p>❓Você quer aprender a maximizar o desempenho do seu computador utilizando um SSD❓</p>
-        <p>👉🏻 Vamos abordar como instalar e configurar um SSD. ✅</p>
-        <p>👉🏻 Instalar Sistema Operacional para aproveitar ao máximo a velocidade do seu dispositivo. ✅</p>
-        <p>👉🏻 É perfeito para quem quer dar um upgrade no desempenho do computador. ✅</p>
-        <p>👉🏻 Venha transformar sua experiência digital! ✅</p>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="http://zabbix7.unialfa.com.br/zabbix/">Servidor Zabbix 7</a>
+        <a href="http://zabbix7.unialfa.com.br/zabbix/zabbix.php?action=dashboard.view&dashboardid=1">Dashboard</a>
+        <a href="http://zabbix7.unialfa.com.br/zabbix/zabbix.php?name=&ip=&dns=&port=&status=-1&evaltype=0&tags%5B0%5D%5Btag%5D=&tags%5B0%5D%5Boperator%5D=0&tags%5B0%5D%5Bvalue%5D=&maintenance_status=1&filter_name=&filter_show_counter=0&filter_custom_time=0&sort=name&sortorder=ASC&show_suppressed=0&action=host.view">Hosts</a>
+        <a href="http://zabbix7.unialfa.com.br/zabbix/zabbix.php?action=toptriggers.list">Triggers</a>
+        <a href="#">Configurações</a>
     </div>
-</div>
 
-<script>
-    // Obter o modal
-    var modal = document.getElementById("myModal");
-    
-    // Obter o botão que abre o modal
-    var btn = document.getElementById("saibaMaisBtn");
-    
-    // Obter o elemento <span> que fecha o modal
-    var span = document.getElementsByClassName("close")[0];
-    
-    // Quando o usuário clicar no botão, abre o modal 
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-    
-    // Quando o usuário clicar em <span> (x), fecha o modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-    
-    // Quando o usuário clicar em qualquer lugar fora do modal, fecha-o
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="card">
+            <h5>Host Summary</h5>
+            <p>Visualize o status e os detalhes de todos os hosts monitorados.</p>
+            <a href="#">Ver Hosts</a>
+        </div>
 
+        <div class="card">
+            <h5>Triggers  - Visão Geral</h5>
+            <p>Verifique os últimos problemas e alertas acionados na rede.</p>
+            <a href="#">Ver Triggers</a>
+        </div>
+
+        <div class="card">
+            <h5>Relatórios Gráficos</h5>
+            <p>Analise dados de desempenho por meio de gráficos e relatórios detalhados.</p>
+            <a href="#">Ver Gráficos Reports</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; Monitoramento Zabbix 2024. Todos os direitos reservados.</p>
+    </div>
 </body>
+
 </html>
