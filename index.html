@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-ssd-32x32.png">
+    <title>PC+Rápido</title>
+    
+    <!-- Link do CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link do Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #007BFF, #FF69B4);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .ad-container {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .ad-container img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .ad-container h1 {
+            margin-bottom: 15px;
+        }
+
+        .ad-container p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            animation: slide-in 12s ease-in-out infinite;
+        }
+
+        .btn-primary {
+            background-color: #FF69B4;
+            border-color: #FF69B4;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff4da6;
+            border-color: #ff4da6;
+        }
+
+        /* Estilo do Modal */
+        .modal-content {
+            background: rgba(0, 0, 0, 0.8); /* Cor de fundo do modal */
+            color: white; /* Cor do texto */
+        }
+
+        /* Estilo do texto justificado */
+        .modal-body {
+            text-align: justify; /* Justifica o texto */
+        }
+
+        /* Estilo dos ícones */
+        .social-icons {
+            text-align: center; /* Centraliza os ícones */
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            color: white; /* Cor dos ícones */
+            margin: 0 10px; /* Espaçamento entre os ícones */
+            font-size: 24px; /* Tamanho dos ícones */
+        }
+
+        /* Animação de movimento para o texto */
+        @keyframes slide-in {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            50% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="ad-container">
+            <h1>Oportunidade Incrível!</h1>
+            <p>Aprenda na prática deixar o seu PC + Rápido!</p>
+            <img src="img/pc_lento.png" alt="Anúncio">
+            <br><br>
+            <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#infoModal">
+                Saiba Mais
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Aprenda na Prática!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    👨🏻‍💻 PC +RÁPIDO - APRENDA NA PRÁTICA!👩🏻‍💻
+                    <br><br>
+                    ❓Você quer aprender a maximizar o desempenho do seu computador utilizando um SSD❓
+                    <br><br>
+                    👉🏻 Vamos abordar como instalar e configurar um SSD. ✅
+                    <br><br>
+                    👉🏻 Instalar Sistema Operacional para aproveitar ao máximo a velocidade do seu dispositivo. ✅
+                    <br><br>
+                    👉🏻 É perfeito para quem quer dar um upgrade no desempenho do computador. ✅
+                    <br><br>
+                    👉🏻 Venha transformar sua experiência digital! ✅ 
+                    <br><br>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/seu_usuario" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/seu_usuario" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
 
