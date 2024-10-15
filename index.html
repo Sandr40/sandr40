@@ -53,6 +53,12 @@
             border-color: #ff4da6;
         }
 
+        /* Estilo do Modal */
+        .modal-content {
+            background: rgba(0, 0, 0, 0.8); /* Cor de fundo do modal */
+            color: white; /* Cor do texto */
+        }
+
         /* Animação de movimento para o texto */
         @keyframes slide-in {
             0% {
@@ -78,7 +84,37 @@
             <p>Aprenda na prática deixar o seu PC + Rápido!</p>
             <img src="img/pc_lento.png" alt="Anúncio">
             <br><br>
-            <a href="https://www.youtube.com/watch?v=-JiUpkFiDo4" class="btn btn-primary btn-lg">Saiba Mais</a>
+            <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#infoModal">
+                Saiba Mais
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Aprenda na Prática!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    👨🏻‍💻 PC +RÁPIDO - APRENDA NA PRÁTICA!👩🏻‍💻
+                    <br><br>
+                    ❓Você quer aprender a maximizar o desempenho do seu computador utilizando um SSD❓
+                    <br><br>
+                    👉🏻 Vamos abordar como instalar e configurar um SSD. ✅
+                    <br><br>
+                    👉🏻 Instalar Sistema Operacional para aproveitar ao máximo a velocidade do seu dispositivo. ✅
+                    <br><br>
+                    👉🏻 É perfeito para quem quer dar um upgrade no desempenho do computador. ✅
+                    <br><br>
+                    👉🏻 Venha transformar sua experiência digital! ✅ 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
         </div>
     </div>
 
