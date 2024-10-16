@@ -24,6 +24,14 @@
             padding: 20px;
         }
 
+        .container-flex {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px; /* Espaçamento entre o anúncio e o modal */
+            width: 100%;
+            max-width: 1200px;
+        }
+
         .ad-container {
             background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
@@ -39,16 +47,6 @@
             border-radius: 10px;
         }
 
-        .ad-container h1 {
-            margin-bottom: 15px;
-        }
-
-        .ad-container p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            animation: slide-in 12s ease-in-out infinite;
-        }
-
         .btn-primary {
             background-color: #FF69B4;
             border-color: #FF69B4;
@@ -59,23 +57,19 @@
             border-color: #ff4da6;
         }
 
-        /* Estilizando o modal lateral (off-canvas) */
+        /* Modal lateral posicionado ao lado do anúncio */
         .side-modal {
-            position: fixed;
-            top: 0;
-            right: -100%; /* Começa fora da tela */
             width: 400px;
-            height: 100%;
             background-color: rgba(0, 0, 0, 0.8);
             color: white;
             padding: 20px;
-            transition: right 0.3s ease;
-            overflow-y: auto;
-            z-index: 1050;
+            border-radius: 10px;
+            display: none; /* Inicialmente oculto */
+            flex-shrink: 0; /* Impede que o modal encolha */
         }
 
         .side-modal.open {
-            right: 0; /* Desliza para dentro da tela */
+            display: block; /* Exibe o modal quando aberto */
         }
 
         .modal-header, .modal-body, .modal-footer {
@@ -99,61 +93,62 @@
             100% { transform: translateX(-100%); opacity: 0; }
         }
 
-        @media (min-width: 768px) {
-            .ad-container p {
-                font-size: 1.5rem;
+        @media (max-width: 768px) {
+            .container-flex {
+                flex-direction: column; /* Empilha os elementos em telas pequenas */
+            }
+
+            .side-modal {
+                width: 100%; /* Modal ocupa toda a largura */
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-                <div class="ad-container">
-                    <h1>Oportunidade Incrível!</h1>
-                    <p>Aprenda na prática deixar o seu PC + Rápido!</p>
-                    <img src="img/pc_lento.png" alt="Anúncio">
-                    <br><br>
-                    <button type="button" class="btn btn-primary btn-lg" onclick="openSideModal()">
-                        Saiba Mais
-                    </button>
+    <div class="container-flex">
+        <!-- Anúncio -->
+        <div class="ad-container">
+            <h1>Oportunidade Incrível!</h1>
+            <p>Aprenda na prática deixar o seu PC + Rápido!</p>
+            <img src="img/pc_lento.png" alt="Anúncio">
+            <br><br>
+            <button type="button" class="btn btn-primary btn-lg" onclick="openSideModal()">
+                Saiba Mais
+            </button>
+        </div>
+
+        <!-- Modal Lateral -->
+        <div id="sideModal" class="side-modal">
+            <div class="modal-header">
+                <h5 class="modal-title">Aprenda na Prática!</h5>
+                <button type="button" class="btn-close btn-close-white" onclick="closeSideModal()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                👨🏻‍💻 PC +RÁPIDO - APRENDA NA PRÁTICA!👩🏻‍💻
+                <br><br>
+                ❓Você quer aprender a maximizar o desempenho do seu computador utilizando um SSD❓
+                <br><br>
+                👉🏻 Vamos abordar como instalar e configurar um SSD. ✅
+                <br><br>
+                👉🏻 Instalar Sistema Operacional para aproveitar ao máximo a velocidade do seu dispositivo. ✅
+                <br><br>
+                👉🏻 É perfeito para quem quer dar um upgrade no desempenho do computador. ✅
+                <br><br>
+                👉🏻 Venha transformar sua experiência digital! ✅
+                <br><br>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!-- Modal Lateral (Side Modal) -->
-    <div id="sideModal" class="side-modal">
-        <div class="modal-header">
-            <h5 class="modal-title">Aprenda na Prática!</h5>
-            <button type="button" class="btn-close btn-close-white" onclick="closeSideModal()" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            👨🏻‍💻 PC +RÁPIDO - APRENDA NA PRÁTICA!👩🏻‍💻
-            <br><br>
-            ❓Você quer aprender a maximizar o desempenho do seu computador utilizando um SSD❓
-            <br><br>
-            👉🏻 Vamos abordar como instalar e configurar um SSD. ✅
-            <br><br>
-            👉🏻 Instalar Sistema Operacional para aproveitar ao máximo a velocidade do seu dispositivo. ✅
-            <br><br>
-            👉🏻 É perfeito para quem quer dar um upgrade no desempenho do computador. ✅
-            <br><br>
-            👉🏻 Venha transformar sua experiência digital! ✅
-            <br><br>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/" target="_blank" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.youtube.com/" target="_blank" title="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeSideModal()">Fechar</button>
             </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" onclick="closeSideModal()">Fechar</button>
         </div>
     </div>
 
