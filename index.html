@@ -77,6 +77,13 @@
             color: #007BFF; /* Muda a cor dos títulos para azul */
         }
 
+        .modal-body img {
+            max-width: 100%; /* Ajusta a largura da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+            margin: 10px 0; /* Adiciona espaçamento acima e abaixo da imagem */
+            border-radius: 5px; /* Arredonda os cantos da imagem */
+        }
+
         .social-icons {
             text-align: center;
             margin-top: 15px;
@@ -90,6 +97,11 @@
 
         .social-icons a:nth-child(2) {
             color: #FF0000;
+        }
+
+        .icon {
+            margin-right: 10px; /* Espaço entre o ícone e o título */
+            color: #007BFF; /* Cor do ícone */
         }
     </style>
 </head>
@@ -122,13 +134,16 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h6>Solução</h6>
+                    <h6><i class="fas fa-tools icon"></i>Solução</h6>
+                    <img src="img/solucao.png" alt="Solução">
                     <p>Você está cansado de um computador lento? Nossa mentoria é a solução perfeita para você! Aprenda a instalar e configurar um SSD, ou deixe que façamos isso por você.</p>
 
-                    <h6>O que é um SSD?</h6>
+                    <h6><i class="fas fa-hdd icon"></i>O que é um SSD?</h6>
+                    <img src="img/ssd.png" alt="O que é um SSD">
                     <p>Um SSD (Solid State Drive) utiliza memória flash, oferecendo desempenho muito superior aos HDs tradicionais. Isso garante inicializações rápidas e uma experiência mais fluida.</p>
 
-                    <h6>Nossa Mentoria</h6>
+                    <h6><i class="fas fa-graduation-cap icon"></i>Nossa Mentoria</h6>
+                    <img src="img/mentoria.png" alt="Nossa Mentoria">
                     <ul>
                         <li>Instalação do SSD: Passo a passo completo.</li>
                         <li>Configuração do Sistema: Como otimizar o desempenho.</li>
@@ -136,19 +151,22 @@
                     </ul>
                     <p>Formato: Aula prática remoto e suporte contínuo em grupo exclusivo.</p>
 
-                    <h6>Serviço de Instalação</h6>
+                    <h6><i class="fas fa-cogs icon"></i>Serviço de Instalação</h6>
+                    <img src="img/instalacao.png" alt="Serviço de Instalação">
                     <ul>
                         <li>Atendimento personalizado em sua casa ou escritório.</li>
                         <li>Garantia de qualidade no serviço.</li>
                     </ul>
 
-                    <h6>Benefícios</h6>
+                    <h6><i class="fas fa-star icon"></i>Benefícios</h6>
+                    <img src="img/beneficios.png" alt="Benefícios">
                     <ul>
                         <li>Aumento significativo de desempenho.</li>
                         <li>Aprendizado prático e suporte contínuo.</li>                        
                     </ul>
 
-                    <h6>Como Funciona?</h6>
+                    <h6><i class="fas fa-check-circle icon"></i>Como Funciona?</h6>
+                    <img src="img/como_funciona.png" alt="Como Funciona">
                     <ol>
                         <li>Entre em contato: Preencha nosso formulário ou ligue.</li>
                         <li>Escolha seu pacote: Mentoria ou serviço de instalação.</li>
@@ -156,7 +174,7 @@
                         <li>Transforme seu PC!</li>
                     </ol>
 
-                    <h6>Entre em Contato</h6>
+                    <h6><i class="fas fa-envelope icon"></i>Entre em Contato</h6>
                     <p>WhatsApp: (62) 9 9999-9999</p>
                     <p>E-mail: pcmaisrapido.br@gmail.com</p>
                     <p>Website: <a href="https://www.pcmaisrapido.cybercerrado.com.br/" target="_blank">pcmaisrapido.cybercerrado.com.br</a></p>
