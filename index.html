@@ -28,10 +28,13 @@
             padding: 20px;
             border-radius: 10px;
             text-align: center;
+            max-width: 90%; /* Limita a largura da div */
+            width: 400px; /* Largura padrão */
         }
 
         .ad-container img {
             max-width: 100%;
+            height: auto; /* Mantém a proporção da imagem */
             border-radius: 10px;
         }
 
@@ -101,7 +104,7 @@
         <div class="ad-container">
             <h1>Oportunidade Incrível!</h1>
             <p>Aprenda na prática deixar o seu PC + Rápido!</p>
-            <img src="img/pc_lento.png" alt="Anúncio">
+            <img src="img/pc_lento.png" alt="Anúncio" class="img-fluid">
             <br><br>
             <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#infoModal">
                 Saiba Mais
@@ -151,4 +154,3 @@
 
 </body>
 </html>
-
