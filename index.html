@@ -34,10 +34,11 @@
         }
 
         .ad-container img {
-            width: 100%; /* Aumenta a largura da imagem */
+            max-width: 100%; /* Garante que a imagem não exceda o contêiner */
             height: auto; /* Mantém a proporção */
             border-radius: 10px;
-            margin-left: -10%; /* Compensa o aumento da largura */
+            margin: 0 auto; /* Centraliza a imagem */
+            display: block; /* Para aplicar a margem automática corretamente */
         }
 
         .ad-container h1 {
