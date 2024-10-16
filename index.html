@@ -26,7 +26,8 @@
 
         .container-flex {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
+            justify-content: center; /* Centraliza horizontalmente */
             gap: 20px; /* Espaçamento entre o anúncio e o modal */
             width: 100%;
             max-width: 1200px;
@@ -45,6 +46,8 @@
             max-width: 100%;
             height: auto;
             border-radius: 10px;
+            transform: scale(1.2); /* Aumenta a figura em 20% */
+            transition: transform 0.3s ease; /* Suaviza a mudança */
         }
 
         .btn-primary {
