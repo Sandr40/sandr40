@@ -64,19 +64,11 @@
         .modal-content {
             background: rgba(0, 0, 0, 0.8); /* Cor de fundo do modal */
             color: white; /* Cor do texto */
-            display: flex; /* Adicionando flexbox */
-            flex-direction: column; /* Colocando os itens em coluna */
-            justify-content: center; /* Centralizando verticalmente */
-            height: 100%; /* Fazendo o modal ocupar a altura total */
         }
 
         /* Estilo do texto justificado */
         .modal-body {
             text-align: justify; /* Justifica o texto */
-            flex-grow: 1; /* Faz o corpo do modal ocupar o espaço disponível */
-            display: flex; /* Adicionando flexbox ao corpo do modal */
-            flex-direction: column; /* Colocando os itens em coluna */
-            justify-content: center; /* Centralizando o conteúdo */
         }
 
         /* Estilo dos ícones */
@@ -86,16 +78,13 @@
         }
 
         .social-icons a {
+            color: #E1306C; /* Cor do Instagram */
             margin: 0 10px; /* Espaçamento entre os ícones */
             font-size: 24px; /* Tamanho dos ícones */
         }
 
-        .social-icons .fa-instagram {
-            color: #E1306C; /* Cor do ícone do Instagram */
-        }
-
-        .social-icons .fa-youtube {
-            color: #FF0000; /* Cor do ícone do YouTube */
+        .social-icons a:nth-child(2) {
+            color: #FF0000; /* Cor do YouTube */
         }
     </style>
 </head>
@@ -119,24 +108,23 @@
 
     <!-- Modal -->
     <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered"> <!-- Modal centralizado -->
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"> <!-- Adicionado modal-dialog-scrollable -->
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="infoModalLabel">Aprenda na Prática!</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-text"> <!-- Nova div para o texto -->
-                        👨🏻‍💻 PC +RÁPIDO - APRENDA NA PRÁTICA!👩🏻‍💻
-                        <br><br>
-                        ❓Você quer aprender a maximizar o desempenho do seu computador❓
-                        <br><br>
-                        👉🏻 Vamos abordar como instalar e configurar um SSD. ✅
-                        <br><br>
-                        👉🏻 Dar um upgrade no desempenho do computador. ✅
-                        <br><br>
-                        👉🏻 Venha transformar sua experiência digital! ✅
-                    </div>
+                    👨🏻‍💻 PC +RÁPIDO - APRENDA NA PRÁTICA!👩🏻‍💻
+                    <br><br>
+                    ❓Você quer aprender a maximizar o desempenho do seu computador❓
+                    <br><br>
+                    👉🏻 Vamos abordar como instalar e configurar um SSD. ✅
+                    <br><br>
+                    👉🏻 Dar um upgrade no desempenho do computador. ✅
+                    <br><br>
+                    👉🏻 Venha transformar sua experiência digital! ✅
+                    <br><br>
                     <div class="social-icons">
                         <a href="https://www.instagram.com/" target="_blank" title="Instagram">
                             <i class="fab fa-instagram"></i>
