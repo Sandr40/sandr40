@@ -90,13 +90,16 @@
         }
 
         .social-icons a {
-            color: #E1306C;
             margin: 0 10px;
             font-size: 24px;
         }
 
-        .social-icons a:nth-child(2) {
-            color: #FF0000;
+        .social-icons a.instagram {
+            color: #E1306C; /* Cor original do Instagram */
+        }
+
+        .social-icons a.youtube {
+            color: #FF0000; /* Cor original do YouTube */
         }
 
         .icon {
@@ -116,9 +119,19 @@
                     <img src="img/pc_lento.png" alt="Anúncio">
 
                     <div class="button-container">
-                        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#comoFuncionaModal">
+                        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#comoFuncionaModal" aria-label="Saiba mais sobre a mentoria e serviço de instalação de SSDs">
                             Saiba Mais
                         </button>
+                    </div>
+
+                    <!-- Adicionando os ícones das redes sociais -->
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/" target="_blank" title="Instagram" class="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" title="YouTube" class="youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -135,15 +148,12 @@
                 </div>
                 <div class="modal-body">
                     <h6><i class="fas fa-tools icon"></i>Solução</h6>
-                    
                     <p>Você está cansado de um computador lento? Nossa mentoria é a solução perfeita para você! Aprenda a instalar e configurar um SSD, ou deixe que façamos isso por você.</p>
 
                     <h6><i class="fas fa-hdd icon"></i>O que é um SSD?</h6>
-                    
                     <p>Um SSD (Solid State Drive) utiliza memória flash, oferecendo desempenho muito superior aos HDs tradicionais. Isso garante inicializações rápidas e uma experiência mais fluida.</p>
 
                     <h6><i class="fas fa-graduation-cap icon"></i>Nossa Mentoria</h6>
-                    
                     <ul>
                         <li>Instalação do SSD: Passo a passo completo.</li>
                         <li>Configuração do Sistema: Como otimizar o desempenho.</li>
@@ -152,21 +162,18 @@
                     <p>Formato: Aula prática remoto e suporte contínuo em grupo exclusivo.</p>
 
                     <h6><i class="fas fa-cogs icon"></i>Serviço de Instalação</h6>
-                    
                     <ul>
                         <li>Atendimento personalizado em sua casa ou escritório.</li>
                         <li>Garantia de qualidade no serviço.</li>
                     </ul>
 
                     <h6><i class="fas fa-star icon"></i>Benefícios</h6>
-                    
                     <ul>
                         <li>Aumento significativo de desempenho.</li>
                         <li>Aprendizado prático e suporte contínuo.</li>                        
                     </ul>
 
                     <h6><i class="fas fa-check-circle icon"></i>Como Funciona?</h6>
-                    
                     <ol>
                         <li>Entre em contato: Preencha nosso formulário ou ligue.</li>
                         <li>Escolha seu pacote: Mentoria ou serviço de instalação.</li>
@@ -177,11 +184,11 @@
                     <h6><i class="fas fa-envelope icon"></i>Entre em Contato</h6>
                     <p>WhatsApp: (62) 9 9999-9999</p>
                     <p>E-mail: pcmaisrapido.br@gmail.com</p>
-                    <p>Website: <a href="https://www.pcmaisrapido.cybercerrado.com.br/" target="_blank">pcmaisrapido.cybercerrado.com.br</a></p>
+                    <p>Website: <a href="https://www.pcmaisrapido.cybercerrado.com.br/" target="_blank" aria-label="Visite nosso site">pcmaisrapido.cybercerrado.com.br</a></p>
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Fechar modal">Fechar</button>
                 </div>
             </div>
         </div>
