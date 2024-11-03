@@ -1,2 +1,198 @@
 
-            
+            <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-ssd-32x32.png">
+    <title>PC+Rápido</title>
+
+    <!-- Link do CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link do Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #007BFF, #FF69B4);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .ad-container {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .ad-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .ad-container h1 {
+            margin-bottom: 15px;
+        }
+
+        .ad-container p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            line-height: 1.5; /* Aumenta o espaçamento entre linhas */
+        }
+
+        .btn-primary {
+            background-color: #FF69B4;
+            border-color: #FF69B4;
+            margin-top: 20px; /* Aumenta o espaço acima do botão */
+        }
+
+        .btn-primary:hover {
+            background-color: #ff4da6;
+            border-color: #ff4da6;
+        }
+
+        .modal-content {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+
+        .modal-body {
+            text-align: justify;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .modal-body h6 {
+            font-weight: bold; /* Coloca os títulos em negrito */
+            color: #007BFF; /* Muda a cor dos títulos para azul */
+        }
+
+        .modal-body img {
+            max-width: 100%; /* Ajusta a largura da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+            margin: 10px 0; /* Adiciona espaçamento acima e abaixo da imagem */
+            border-radius: 5px; /* Arredonda os cantos da imagem */
+        }
+
+        .social-icons {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 24px;
+        }
+
+        .social-icons a:nth-child(1) {
+            color: #E1306C; /* Cor original do Instagram */
+        }
+
+        .social-icons a:nth-child(2) {
+            color: #FF0000; /* Cor original do YouTube */
+        }
+
+        .icon {
+            margin-right: 10px; /* Espaço entre o ícone e o título */
+            color: #007BFF; /* Cor do ícone */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="ad-container">
+                    <h1>Oportunidade Incrível!</h1>
+                    <p>Aprenda na prática deixar o seu PC + Rápido!</p>
+                    <img src="img/pc_lento.png" alt="Computador lento mostrando a necessidade de otimização"> <!-- Imagem centralizada e responsiva -->
+
+                    <p>Quer saber como funciona?</p> <!-- Texto de orientação acima do botão -->
+                    <div class="button-container">
+                        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#comoFuncionaModal">
+                            Saiba Mais
+                        </button>
+                    </div>
+
+                    <!-- Ícones de redes sociais -->
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Modal Como Funciona -->
+<div class="modal fade" id="comoFuncionaModal" tabindex="-1" aria-labelledby="comoFuncionaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="comoFuncionaLabel">Solução para Desempenho Lento do PC</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+                <h6><i class="fas fa-tools icon"></i> Solução</h6>
+                <p>Você está cansado de um computador lento? Experimente nossa mentoria especializada ou opte pelo nosso serviço de instalação. Aprenda a instalar e configurar um SSD de forma prática ou deixe que nossa equipe faça o trabalho por você.</p>
+
+                <h6><i class="fas fa-hdd icon"></i> O que é um SSD?</h6>
+                <p>Um SSD (Solid State Drive) utiliza memória flash, proporcionando desempenho muito superior ao dos HDs tradicionais. Com ele, você terá inicializações rápidas, uma experiência de navegação fluida e muito mais agilidade no dia a dia.</p>
+
+                <h6><i class="fas fa-graduation-cap icon"></i> Nossa Mentoria</h6>
+                <ul>
+                    <li>Instalação do SSD: Acompanhe um passo a passo completo.</li>
+                    <li>Configuração do Sistema: Orientações para otimizar o desempenho do seu computador.</li>
+                    <li>Manutenção do SSD: Dicas valiosas para garantir a durabilidade e o desempenho.</li>
+                </ul>
+                <p>Formato: Aula prática remota, com suporte contínuo em grupo exclusivo.</p>
+
+                <h6><i class="fas fa-cogs icon"></i> Serviço de Instalação</h6>
+                <ul>
+                    <li>Instalação física do SSD em seu computador.</li>
+                    <li>Configuração e otimização do sistema operacional para extrair o máximo de desempenho.</li>
+                    <li>Garantia de qualidade para um serviço confiável e seguro.</li>
+                </ul>
+
+                <h6><i class="fas fa-star icon"></i> Benefícios</h6>
+                <ul>
+                    <li>Aumento significativo de desempenho no seu computador.</li>
+                    <li>Aprendizado prático e suporte contínuo para quem optar pela mentoria.</li>
+                    <li>Tranquilidade e garantia de um serviço profissional para quem escolher a instalação.</li>
+                </ul>
+
+                <h6><i class="fas fa-check-circle icon"></i>Como Funciona?</h6>
+                <ol>
+                    <li>Entre em contato</li>
+                    <li>Escolha seu pacote - Mentoria ou Serviço de Instalação.</li>
+                    <li>Agende sua sessão.</li>
+                </ol>
+
+                <h6><i class="fas fa-envelope icon"></i>Entre em Contato</h6>
+                <p><i class="fab fa-whatsapp icon" style="color: #25D366;"></i> (62) </p>
+                <p><i class="fas fa-envelope icon" style="color: #FFFFFF;"></i> pcmaisrapido.br@gmail.com</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+
